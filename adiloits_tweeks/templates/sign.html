@@ -1,0 +1,195 @@
+{% extends "layout.html"%}
+{% block content %}
+
+<h1 class="hacks">Flatten the curve,Reinvent your business.</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-sm-12 col-md-8">
+            <div class="all">
+
+                <!-- <div id="content-1" class="mdc-card">
+                    
+                    <p class="pra">
+                        The corona pandemic is hitting our African businesses way 
+                        harder than any other challenge in the previous decade, for 
+                        the fact that most businesses/ organizations hadn’t embraced 
+                        running online and they depend on foot traffic or daily physical 
+                        sales. This is pushing business leaders to rethink their current 
+                        business models to adapt to current conditions. SMEs in particular are 
+                        faced with the challenge of maintaining existing supply chains, preventing 
+                        an explosion in costs, dealing with falling demand, COVID-19 restrictions and at 
+                        the same time facing enormous uncertainty.
+                    </p>
+                    <p class="pra">
+                        On the other hand there are some creative entrepreneurs 
+                        who are defying odds and creating or adjusting their businesses and are continuously 
+                        providing products and services amidst the crisis.
+                    </p>
+                    <p class="pra">
+                        Using our Adiloits Hacks & Tweaks platform and our team of 
+                        experts, we are collecting a pool of business models working 
+                        in Uganda and those across the world during this crisis. We leverage 
+                        that data and information to offer a variety of value propositions and business 
+                        models which SMES can pick, tweak and customize to enable 
+                        them to run their business during the Crisis and after.
+                    </p>
+                    <p>
+                        Here is a sneak peak ;
+                    </p>
+                    <p>
+                        <ul class="lists">
+                            <li>
+                                An open portal that notifies consumers of operating business 
+                                in their area during the crisis
+                            </li>
+                            <li>
+                                How companies in health can leverage crowdsourcing of 
+                                information in the crisis and create  their next products and services.
+                            </li>
+                            <li> 
+                            How businesses in transport industry leverage sharing economy 
+                            approach to operate during the crisis
+                            </li>
+                            <li>
+                                How businesses in transport industry leverage sharing economy 
+                                approach to operate during the crisis
+                            </li>
+                        </ul>
+                    </p>
+                </div> -->
+
+                <main class="main-1">
+                    <div id="container" class="container">
+                        <div id="card" class="mdc-card" style="height: auto;">
+
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <div class="col-md-8 col-sm-8 ">
+                                    <p id='intro_text'>
+                                        We have entered a new world economy,the post-Covid19 era will be shaped by new
+                                        habits & regulations based on reduced close-contact interaction ,tighter travel
+                                        & hygiene restrictions.Your business needs to adapt and we are here to help
+                                    </p>
+                                    <p id='intro_text'>
+                                        We are collecting a pool of business models working locally and internationally
+                                        amidst this crisis. We leverage that data to offer a variety of value
+                                        propositions and business models which businesses can pick, tweak and customize
+                                        to enable them to run during the Crisis and post Covid-19.
+                                    </p>
+                                    <p id='intro_text'>
+                                        To be able provide more business models and offerings,we need facts of what's
+                                        happening on the ground. Share with us your experience of COVID19 by clicking on
+                                        any of the buttons below.
+                                    </p>
+                                </div>
+                                <div class="col-2 "></div>
+                            </div>
+
+                            <!-- <div class="span">Are you new</div> -->
+                            <div class="row">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="buttons">
+                                            <button id="btn" class="mdc-fab mdc-fab--extended"><a style="color: yellow;" href="https://docs.google.com/forms/d/e/1FAIpQLSeQSWCBitF86_LYBYHgsohOfcC3vGnrgyx4rYS_CwP1T7d7UA/viewform?usp=pp_url">Busines_Owner</a> </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="buttons">
+
+                                            <button id="btn" class="mdc-fab mdc-fab--extended"><a style="color: yellow;" href="https://docs.google.com/forms/d/e/1FAIpQLSfSm78CKPECHzoOa14Ev3UnyjHYG5r00AmHHh71RlTJ49IX4A/viewform?usp=pp_url">Consumer</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="exit">
+                                Exisiting member
+                            </div>
+
+                            <form method="POST">
+                                {{ form.hidden_tag() }}
+                                <fieldset id="logins-here" class="form-group">
+
+                                    <div class="form-group">
+                                        {{ form.email.label(class="form-control-label") }}
+                                        {% if form.email.errors %}
+                                        {{form.email(class="form-control form-control-lg is-invalid")}}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.email.errors %}
+                                            <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                        {% else %}
+                                        {{ form.email(class="form-control orm-control-lg") }}
+                                        {% endif %}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.password.label(class="form-control-label") }}
+                                        {% if form.password.errors %}
+                                        {{form.password(class="form-control form-control-lg is-invalid")}}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.password.errors %}
+                                            <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                        {% else %}
+                                        {{ form.password(class="form-control orm-control-lg") }}
+                                        {% endif %}
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    {{ form.submit(class="btn btn-outline-info") }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="col-md-6 col-sm-6">
+                                                <div class="form-check">
+                                                    {{ form.remember(class="form-check-input") }}
+
+                                                </div>
+                                                <div class="col-md-6 col-sm-6">
+                                                    <div class="form-check">
+
+                                                        {{ form.remember.label(class="form-check-input") }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </fieldset>
+
+
+
+                                <div class="row">
+                                    <div class="text-muted ml-2">
+                                        <a href="{{ url_for('reset_request') }}">Forgot password</a>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div class="row" id="account">
+                                <div class="border-top pt-3">
+                                    <small class="text-muted">
+                                        Need An Account? <button id="create-acc" class="btn btn-success"><a id="create" href="{{ url_for('registration')}}" class="ml-2">Sign Up
+                                            Now</a></button>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+
+
+
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+
+{% endblock content %}

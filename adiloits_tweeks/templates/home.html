@@ -1,0 +1,129 @@
+{% extends "layout.html" %} {% block content %}
+<main class="main">
+  <div class="container text-center">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h3>
+          A collaborative approach of creating business solutions in extreme
+          times of uncertainty.
+          <!-- <div class="bod-2"></div> -->
+        </h3>
+        <p class="paragraphing">
+          Adiloits Hacks & tweaks is an open innovation platform created to
+          solve extremely complex problems that affect businesses at massive
+          scale in times of uncertainty. Hacks & tweaks provide value
+          propositions and businesses models for businesses to survive in that
+          complexity.
+        </p>
+        <p class="paragraphing">
+          During the COVID-19 pandemic outbreak, Adiloits had a question of How
+          might we support businesses to thrive during and after the crisis? The
+          answer was Adiloits Hacks & Tweaks.
+        </p>
+
+        <a href="">Find out Business solutions for COVID-19 </a>
+      </div>
+      <div class="col-md-6">
+        <img
+          class="img-fluid"
+          src="{{ url_for('static', filename='taxi-teamwork-in-office.png') }}"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 order-xs-12">
+        <img
+          class="img-fluid"
+          src="{{ url_for('static', filename='taxi-2.png') }}"
+          alt=""
+        />
+      </div>
+      <div class="col-md-6 text-center order-xs-1">
+        <h3>
+          Model
+          <!-- <div class="bod-1"></div> -->
+        </h3>
+        <p class="paragraphing">
+          We believe to solve today’s complex problems, there needs to be
+          collaboration, where we can share ideas and co-create to find
+          solutions. We are built on an open innovation model because it allows
+          us to break barriers, find support, and iterate on the ideas that
+          create real impact.
+        </p>
+        <p class="paragraphing">
+          We are a collection of entrepreneurs, consumers, business enthusiasts
+          and experts working hand in hand to see that business and supply chain
+          activities commence as usual or even better in rather unusual
+          circumstances.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="hows">
+    <div class="how">
+      How it works
+      <div class="bod"></div>
+    </div>
+  </div>
+
+  <div class="container mt-2">
+    <div class="row">
+      <div class="card-deck">
+        <div class="card text-center shadow">
+          <img
+            class="svg"
+            src="{{ url_for('static', filename='share.png') }}"
+            alt=""
+          />
+
+          <div class="card-body">
+            <h5 class="card-title share">Share</h5>
+            <p class="card-text">
+              Share your experience (Facts not opinions!!! ) of how the crisis
+              has affected your business and what you are doing to survive it.
+              To get real solutions, we use real life encounters rather than
+              could have been.
+            </p>
+          </div>
+        </div>
+        <div class="card text-center shadow">
+          <img
+            class="svg"
+            src="{{ url_for('static', filename='co-create.png') }}"
+            alt=""
+          />
+
+          <div class="card-body">
+            <h5 class="card-title share">Co-create</h5>
+            <p class="card-text">
+              Become a member of the collective, contribute and collaborate with
+              a pool of consumers, stakeholders to create innovative business
+              models and value propositions.
+            </p>
+          </div>
+        </div>
+        <div class="card text-center shadow">
+          <img
+            class="svg"
+            src="{{ url_for('static', filename='customize.png') }}"
+            alt=""
+          />
+
+          <div class="card-body">
+            <h5 class="card-title share">Customise</h5>
+            <p class="card-text">
+              Work with our team of experts to help you validate, tweak, fix,
+              remix any of the concepts to be able work in your business.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock content %}

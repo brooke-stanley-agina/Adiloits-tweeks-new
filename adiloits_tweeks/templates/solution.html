@@ -1,0 +1,275 @@
+{% extends "layout.html" %} {% block content %}
+
+<div>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <p>
+          Our solutions leverage the current situation and post-crisis
+          predictions, they are eye openers to what businesses have to do to
+          survive the crisis and prepare for the new wave that has already
+          started.
+        </p>
+
+        <p>
+          The Covid-19 & post era is and will be shaped by new habits &
+          regulations like ;
+        </p>
+      </div>
+      <div class="col-md-6">
+        <div class="tip">
+          <img
+            src="{{ url_for('static', filename='taxi-design.png') }}"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-2">
+    <!-- <div id="tables" class="mdc-data-table">
+      <table class="mdc-data-table__table" aria-label="Dessert calories">
+        <thead>
+          <tr id="ruler" class="mdc-data-table__header-row">
+            <th
+              class="mdc-data-table__header-cell"
+              role="columnheader"
+              scope="col"
+            >
+              <b>Changing rules & policies</b>
+            </th>
+            <th
+              class="mdc-data-table__header-cell"
+              role="columnheader"
+              scope="col"
+            >
+              <b>New habits & behaviors</b>
+            </th>
+          </tr>
+          <tr id="ruler" class="mdc-data-table__row">
+            <td id="content" class="mdc-data-table__cell">
+              <p id="cont">
+                • Limited gatherings <br />
+                • Travel restrictions <br />
+                • Hygiene requirements <br />
+                • Protecting vulnerable groups
+              </p>
+            </td>
+            <td id="content" class="mdc-data-table__cell">
+              <p id="cont">
+                • Remote working <br />
+                • Mixed work/life balance <br />
+                • Access to e-commerce & logistics <br />
+                • E-health
+              </p>
+            </td>
+          </tr>
+        </thead>
+      </table>
+    </div> -->
+    <div class="container">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Changing rules & policies</th>
+            <th scope="col">New habits & behaviors</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Limited gatherings</td>
+            <td>Remote working</td>
+          </tr>
+
+          <tr>
+            <td>Travel restrictions</td>
+            <td>Mixed work/life balance</td>
+          </tr>
+
+          <tr>
+            <td>Hygiene requirements</td>
+            <td>Access to e-commerce & logistics</td>
+          </tr>
+
+          <tr>
+            <td>Protecting vulnerable groups</td>
+            <td>E-health</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="disc container">
+      <p>
+        <b>DISCLAIMER;</b>The business models and value propositions on this
+        platform are not fully validated,they are to inspire and ignite your
+        creativity to start finding ways to improve your business. Feel free to
+        tweak, fix, remix any part of this work by continuing on our
+        participation section or page where you can ask,improve or answer any of
+        the questions for validation to help other businesses survive the crisis
+        and post era.
+      </p>
+    </div>
+
+    <div class="select">
+      Select your industry
+    </div>
+    <div class="bod"></div>
+
+    <div class="buttons">
+      <button id="btn-1" class="mdc-fab mdc-fab--extended">
+        <a href="{{ url_for('health') }}">HEALTH</a>
+      </button>
+      <button id="btn-1" class="mdc-fab mdc-fab--extended">
+        <a href="{{ url_for('mobility') }}">MOBILITY</a>
+      </button>
+      <button id="btn-1" class="mdc-fab mdc-fab--extended">
+        <a href="{{ url_for('health') }}">SUPPLY CHAIN </a>
+      </button>
+      <button id="btn-1" class="mdc-fab mdc-fab--extended">
+        <a href="{{ url_for('health') }}">ENTERTAINMENT</a>
+      </button>
+    </div>
+
+    <div class="solutions">
+      <div class="sol">
+        Your solution
+        <div class="bod"></div>
+      </div>
+
+      <div class="container">
+        <div class="card-deck">
+          <div class="card">
+            <div class="title">
+              HEALTH
+            </div>
+            <div class="card-body">
+              <ol>
+                <li>
+                  Crowdsource Challenges and disseminate health information
+                  amidst the crisis
+                </li>
+                <li>Personal health records as a value proposition</li>
+                <li>Digital ids with health records for post cris</li>
+                <li>Depression and anxiety treatment as a value proposition</li>
+              </ol>
+            </div>
+            <span class="text-center mb-2"> <a href="{{ url_for('health') }}">Explore</a> </span>
+          </div>
+          <div class="card">
+            <div class="title">
+              MOBILITY
+            </div>
+            <div class="card-body">
+              <ol>
+                <li>
+                  Bike sharing,reinvent from selling to hiring out as a service
+                </li>
+              </ol>
+            </div>
+            <span class="text-center mb-2"><a href="{{ url_for('mobility') }}">Explore</a></span>
+          </div>
+          <div class="card">
+            <div class="title">
+              SUPPLY CHAIN AND DISTRIBUTION
+            </div>
+            <div class="card-body">
+              <ol>
+                <li>
+                  Open business geolocation,finding operating business in your
+                  location.
+                </li>
+                <li>
+                  Delivery as service with hygiene at core. It will require more
+                  than just delivery
+                </li>
+              </ol>
+            </div>
+            <span class="text-center mb-2"><a href="{{ url_for('supply') }}">Explore</a></span>
+          </div>
+          <div class="card">
+            <div class="title">
+              ENTERTAINMENT
+            </div>
+            <div class="card-body">
+              <ol>
+                <li>Virtual/digital performances as a value proposition</li>
+              </ol>
+            </div>
+            <span class="text-center mb-2"><a href="{{ url_for('entertainment') }}">Explore</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4 mb-2">
+      <h3 class="text-center">Contact, support and participate</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="title-2">
+            Are you having any business model acts for Covid-19 ?
+          </div>
+          <form class="forms" action="">
+            <div id="forms" class="form-group">
+              <label for="exampleFormControlTextarea1">Suggestions</label>
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="3"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <!-- <div class="col-md-6"> -->
+          <!-- <div class="title-2">
+            Would you want us to help you improve or create your business model?
+            Get in touch
+          </div> -->
+          <!-- <form id="form">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Company</label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+              />
+            </div>
+            
+          </form> -->
+          
+        <!-- </div> -->
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock content%}

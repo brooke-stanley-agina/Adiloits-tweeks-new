@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- <--bootstrap Link--> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <!-- <--material-components-web Link--> 
+        <link href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css" rel="stylesheet">
+    
+        <!-- <--Google-fonts Link--> 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500&display=swap" rel="stylesheet"> 
+    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+
+   
+
+    {% if title %}
+        <title>Adiloits-Tweeks - {{ title }}</title>
+    {% endif %}
+
+</head>
+
+<body>
+
+
+  <!-- <-- header -->
+  <header>
+    <div class="navbar navbar-expand-lg navbar-light bg-dark">
+      <div class="container">
+      <!-- <-- Logo -->
+      <!-- <div id="log" class="logo ">
+        <img
+          class="rounded-circle article-img"
+          src="{{ url_for('static', filename='Adiloits-Logo-White-Color.png') }}"
+        />
+      </div> -->
+      <a class="navbar-brand" href="/">
+        <img
+          class="rounded-circle article-img img-fluid"
+          src="{{ url_for('static', filename='Adiloits-Logo-White-Color.png') }}"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          {% if current_user.is_authenticated %}
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('solution') }}">Solutions</a></li>
+          <li><a href="{{ url_for('posting') }}">Posts</a></li>
+          <li><a href="{{ url_for('account') }}">Account</a></li>
+          <li><a href="{{ url_for('logout') }}">Logout</a></li>
+          {% else %}
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('solution') }}">Solutions</a></li>
+          <li><a href="{{ url_for('sign') }}">Sign In</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
+
+    </div>
+  </header>
+  {% block content %}{% endblock %}
+
+
+  <footer id="footer">
+    <div id="footer-try">
+     <div class="row footer-row">
+       <div class="col-md-4">
+         <div class="">
+           <h2 id="footer-head">Who we are?</h2>
+           <p>Hacks & tweaks is a product of Adiloits, a business design firm.</p>
+         </div>
+       </div>
+       <div class="col-md-4">
+         <div class="">
+           <h2 id="footer-head">Services</h2>
+           <div class="footer-links">
+             
+             <a id="footo" href="https://www.adiloits.com/services-2/">Startup design and validation</a><br>
+             <a id="footo" href="https://www.adiloits.com/services-2/">Corporate innovation</a><br>
+             <a id="footo" href="https://www.adiloits.com/services-2/">Business model Innovation</a><br>
+             <a id="footo" href="https://www.adiloits.com/services-2/">Design/User research</a><br>
+             <a id="footo" href="https://www.adiloits.com/services-2/">Product design</a><br>
+ 
+           </div>
+         </div>
+       </div>
+       <div class="col-md-4">
+         <div class="">
+           <h2 id="footer-head">Our studios</h2>
+           <div class="row">
+             <div class="col-md-6">
+               <b>Uganda</b> <br>
+               SMS house,3rd floor <br>
+               7th street,industrial area <br>
+               Tel;+256783671037 <br>
+               +256701707632 <br>
+               Info@adiloits.com
+             </div>
+             <div class="col-md-6">
+               <b>Burundi</b> <br>
+               RN3 Av de La Liberte <br>
+               Deloitte Building,4th Floor <br>
+               Tel;+25761703838<br>
+               info@adiloits.com<br>
+ 
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+    </div>
+ 
+ 
+ 
+   </footer>
+ 
+
+
+  <script src="Javascript-files/nav-bar.js"></script>
+
+  <!-- <--bootstrap Script-->
+  <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+  <!-- <script>
+            // toggle textarea
+            const btns = document.querySelectorAll(".mdc-button");
+      
+            btns.forEach(btn => {
+              btn.addEventListener("click", () => {
+      
+                const panel = btn.parentElement.nextElementSibling;
+      
+                const parent = panel.parentElement;
+                
+                console.log(parent)
+      
+                  if (panel.style.display === "none") {
+                    panel.style.display = "flex";
+                    parent.style.marginBottom = "140px";
+                  } else {
+                    panel.style.display = "none";
+                    parent.style.marginBottom = "40px";
+                  }
+              });
+            });
+          </script> -->
+</body>
+
+</html>

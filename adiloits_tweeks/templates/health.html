@@ -1,0 +1,180 @@
+{% extends "layout.html" %} {% block content %}
+
+<div class="container align-items-center">
+  <div class="row">
+    <div class="card shadow mt-4 mb-3 p-3 col-md-8 offset-md-2">
+      <!-- ... content ... -->
+      <h2>Health Industry</h2>
+      <h4>Introduction</h4>
+      <div class="till">
+        We couldn't begin with any other industry other than health as it's
+        where the COVID-19 Crisis hinges on.
+        <p>
+          Rocket Health is a product of the Medical Concierge Group,it offers
+          services like telemedic,pharmacy,laboratory and clinical services.
+          Rockethealth model leverages digital platforms like web and social
+          media platforms as their channels and they have been able to build a
+          community and great customer experience around it.
+        </p>
+        <p>
+          <b>Mass early restock:</b> Products like Antibacterial
+          disinfectant,Sanitizers, Alcoholic pad,Gloves and face masks. As a
+          quick tweak in their model, the company had to introduce or restock
+          such products at the beginning of the crisis.
+        </p>
+        <p>
+          <b>Market responsive:</b> Rockhealth didn't just have offerings that
+          are on demand but they have built a great customer experience in
+          ordering and delivery. To maximize the crisis and remain relevant in
+          the market, they altered the order on the UI such that the COVID-19
+          handy health products are the first you see while navigating on their
+          e-pharmacy store.
+        </p>
+        <p>
+          <b>Note</b> <br />
+          Businesses that had already invested in digital infrastructure
+          channels of reaching their customers have more opportunity over their
+          competitors.
+        </p>
+      </div>
+    </div>
+
+    <div class="card shadow mb-3 p-3 col-md-8 offset-md-2">
+      <div class="words">
+        <h2>Business model hacks for health.</h2>
+        <h4>1. Crowdsource and Health information dissemination</h4>
+        <div class="till">
+          The crisis has brought a health panic now more than ever causing
+          patients to seek health information and support urgently.Companies in
+          the health sector have an opportunity to create channels where they
+          can have patients to ask and share information during the crisis.
+          <p>
+            <b>Resources and activities</b> <br />
+            A seamless portal to ask,share and receive information. <br />
+            Massive content creation <br />
+            24hr online support <br />
+            Delivery mechanisms <br />
+            Cautious and secure employee engagement program. <br />
+            Prebooking
+          </p>
+          <p>
+            <b>Business opportunities</b> <br />
+            Community building and organic customer growth. <br />
+            Customers knowledge and information becomes part of creating
+            solutions for them.<br />
+            Big data selling through reports<br />
+            Service scheduling,new product or service offering based on data.<br />
+          </p>
+          <p>
+            <b>Business model trends</b> <br />
+            Crowdsourcing <br />
+            Big data
+          </p>
+          <p>
+            <b>Business model Characteristics </b> <br />
+            Online community <br />
+            Information dissemination
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <button id="long" class="btn btn-block text-center">
+            <a href="{{ url_for('new_post') }}">Ask</a>
+          </button>
+        </div>
+        <div class="col-6">
+          <button id="long" class="btn btn-block text-center">
+            <a href="{{ url_for('new_post') }}">Improve</a>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card shadow mb-3 p-3 col-md-8 offset-md-2">
+      <div class="words">
+        <h4>2. Personal health records as a value proposition</h4>
+        <div class="till">
+          The crisis presents an opportunity for medical institutions to create
+          patient databases which have past health records and patients status
+          of the COVID-19 virus. As travel bans loosen there is going to be a
+          high demand for personal health records locally and globally.
+          <p>
+            <b>What to validate?</b> <br />
+            Regulations from ministry of health <br />
+            The possibilities of setting up a quick infrastructure to capture
+            past and current patients records.<br />
+            Pricing for patients to access the data.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <button id="long" class="btn btn-block text-center">
+            <a href="{{ url_for('new_post') }}">Ask</a>
+          </button>
+        </div>
+        <div class="col-6">
+          <button id="long" class="btn btn-block text-center">
+            <a href="{{ url_for('new_post') }}">Improve</a>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card shadow mb-3 p-3 col-md-8 offset-md-2">
+      <div class="words">
+        <h4>3. Depression and anxiety treatment as a value proposition</h4>
+        <div class="till">
+          People around the world are facing increasing mental health issues
+          during the COVID-19 pandemic.They are at risk of abuse,Loss of
+          businesses, employees facing job uncertainty and children are among
+          those most at risk. This presents an opportunity for businesses in
+          mental health wellbeing to create offerings that can address the
+          problem in homes and at work places.
+          <p>
+            <b>What to validate?</b> <br />
+            Talent acquisition for specialists in areas of mental health?
+            <br />
+            Infrastructure to set up and operate remote therapy?<br />
+            Demand validation beginning with existing customers?
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <button id="long" class="btn btn-block text-center">
+            <a href="{{ url_for('new_post') }}">Ask</a>
+          </button>
+        </div>
+        <div class="col-6">
+          <button id="long" class="btn btn-block text-center">
+            <a href="{{ url_for('new_post') }}">Improve</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% for post in posts %}
+<article class="media content-section">
+  <img
+    class="rounded-circle article-img"
+    src="{{ url_for('static', filename='profile-pics/' + post.author.image_file) }}"
+  />
+  <div class="media-body">
+    <div class="article-metadata">
+      <a class="mr-2" href="#">{{ post.author.username }}</a>
+      <small class="text-muted"
+        >{{ post.date_posted.strftime('%Y-%m-%d') }}</small
+      >
+    </div>
+    <h2>
+      <a class="article-title" href="{{ url_for('post', post_id=post.id) }}"
+        >{{ post.title }}</a
+      >
+    </h2>
+    <p class="article-content">{{ post.content }}</p>
+  </div>
+</article>
+{% endfor %} {% endblock content%}
